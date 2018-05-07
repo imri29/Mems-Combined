@@ -1,0 +1,49 @@
+.inputs {
+  @include centerer;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  form {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 25px;
+    @media (max-width: $mobile-size) {
+      margin-bottom: 50px;
+    }
+    input {
+      height: 56px;
+      width: 65%;
+      margin-top: 20px;
+      font-size: 24px;
+      font-family: $main-font;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      &:focus {
+        outline: none !important;
+        border: 1px solid indianred;
+        box-shadow: 0 0 10px #719ece;
+      }
+      @media (max-width: $mobile-size) {
+        height: 40px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  font-family: $main-font;
+}
+
+:-ms-input-placeholder {
+  font-family: $main-font;
+}
+
+:-moz-placeholder {
+  font-family: $main-font;
+}
+
+::-moz-placeholder {
+  font-family: $main-font;
+}

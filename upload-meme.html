@@ -1,0 +1,51 @@
+<!doctype html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>הוספת מם למאגר</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+          integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="./styles/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="pic-wrapper">
+    <img src="./logo-memeking.png">
+</div>
+
+<div class="inputs">
+    <h1>מימ קינג - הוספת מם למאגר</h1>
+    <form>
+        <input type="text" name="name" placeholder="שם">
+        <input type="email" name="email" placeholder="אי-מייל">
+        <input type="text" name="description" placeholder="תיאור המם">
+        <input type="file" name="file" class="file">
+    </form>
+    <div>
+        <button class="upload-button" type="submit"><span>שליחה</span></button>
+    </div>
+</div>
+
+<!-- Modal -->
+
+<div class="upload-meme-modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="fas fa-times close"></span>
+        <p class="success">המם נשלח בהצלחה!</p>
+        <p class="failed">שגיאה! נסו שוב</p>
+    </div>
+</div>
+</body>
+</html>
+
