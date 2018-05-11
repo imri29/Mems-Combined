@@ -50,7 +50,7 @@
   height: 25px;
   border: 3px solid #0097f1;
   border-radius: 50%;
-  border-top-color: #fff;
+  border-top-color: #ffffff;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite; }
 
@@ -106,13 +106,10 @@
     color: #cc0000;
     font-size: 30px; }
 
-.random-meme-modal {
+#random-meme-modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
@@ -121,7 +118,7 @@
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
-  .random-meme-modal .modal-content {
+  #random-meme-modal .modal-content {
     -webkit-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
     box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
@@ -133,18 +130,19 @@
     height: 90%;
     text-align: center; }
     @media (max-width: 767px) {
-      .random-meme-modal .modal-content {
+      #random-meme-modal .modal-content {
         width: 100%;
         height: 100%; } }
-    .random-meme-modal .modal-content .close {
+    #random-meme-modal .modal-content .close {
       color: #aaa;
       float: right;
       font-size: 34px; }
-      .random-meme-modal .modal-content .close:hover, .random-meme-modal .modal-content .close:focus {
+      #random-meme-modal .modal-content .close:hover, #random-meme-modal .modal-content .close:focus {
         color: black;
         text-decoration: none;
         cursor: pointer; }
 
+/****  Upload Meme Section ****/
 *,
 *:before,
 *:after {
@@ -154,12 +152,6 @@ body,
 html {
   background-color: #0097f1;
   font-family: "Open Sans Hebrew", sans-serif; }
-
-.random-meme-page body {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-between; }
 
 body {
   height: 100%;
@@ -175,24 +167,24 @@ body {
     margin: 10% auto;
   }*/ }
 
-img {
-  max-width: 70px;
-  max-height: 70px; }
+.logo {
+  max-width: 100px;
+  max-height: 100px; }
   @media (max-width: 767px) {
-    img {
-      max-height: 60px;
-      max-width: 60px; } }
+    .logo {
+      max-height: 80px;
+      max-width: 80px; } }
 
-h1 {
+.upload-title {
   color: #ffffff;
   margin: 20px 0;
   font-weight: lighter;
   font-size: 5vw; }
   @media (max-width: 767px) {
-    h1 {
+    .upload-title {
       margin: 20px 20px; } }
 
-button {
+.upload-button {
   width: 26%;
   height: 100px;
   color: #0097f1;
@@ -204,27 +196,32 @@ button {
   -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
   box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75); }
   @media (max-width: 767px) {
-    button {
+    .upload-button {
       font-size: 24px;
       width: 60%;
       margin-top: 40px; } }
 
-/* todo:
-fix the inputs inner-lining
-*/
-/*** random meme section */
+/**** Random Meme Section ****/
+.random-meme-page .random-meme-body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  height: 100%; }
+
 .pic-wrapper {
   margin-top: 50px;
-  text-align: center; }
-  .pic-wrapper img {
-    width: 70px;
-    height: 70px; }
+  text-align: center;
+  height: 150px; }
+  .pic-wrapper .logo-random {
+    width: 100px;
+    height: 100px; }
 
 .btn-container {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .btn-container button {
+  .btn-container .random-button {
     -webkit-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
     box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
@@ -232,17 +229,10 @@ fix the inputs inner-lining
     background: #ffffff;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-    width: 280px;
-    height: 70px;
-    font-size: 28px;
+    width: 300px;
+    height: 85px;
+    font-size: 32px;
     font-family: "Open Sans Hebrew", sans-serif; }
-
-.spinner {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin: 0 auto;
-  color: #0097f1; }
 
 .new-meme {
   text-align: center;
@@ -251,6 +241,6 @@ fix the inputs inner-lining
   .new-meme .memes {
     max-height: 100%;
     max-width: 100%;
-    margin: 0 auto; }
+    margin: 105px auto; }
 
 /*# sourceMappingURL=style.css.map */
