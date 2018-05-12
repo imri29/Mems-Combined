@@ -60,7 +60,6 @@
 @-webkit-keyframes spin {
   to {
     -webkit-transform: rotate(360deg); } }
-/* The Modal (background) */
 .upload-meme-modal {
   display: none;
   /* Hidden by default */
@@ -80,45 +79,50 @@
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  text-align: center; }
-  .modal-content .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold; }
-    .modal-content .close:hover, .modal-content .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer; }
-  .modal-content .success {
-    display: none;
-    color: #4bb543;
-    font-size: 30px; }
-  .modal-content .failed {
-    display: none;
-    color: #cc0000;
-    font-size: 30px; }
+  .upload-meme-modal .upload-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center; }
+    .upload-meme-modal .upload-modal-content .upload-close {
+      color: #aaa;
+      float: right;
+      font-size: 34px; }
+      .upload-meme-modal .upload-modal-content .upload-close:hover, .upload-meme-modal .upload-modal-content .upload-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer; }
+    .upload-meme-modal .upload-modal-content .success {
+      display: none;
+      color: #4bb543;
+      font-size: 30px; }
+    .upload-meme-modal .upload-modal-content .failed {
+      display: none;
+      color: #cc0000;
+      font-size: 30px; }
 
 #random-meme-modal {
   display: none;
+  /* Hidden by default */
   position: fixed;
+  /* Stays in place */
   z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
+  /* Full width */
   height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
-  #random-meme-modal .modal-content {
+  #random-meme-modal .random-modal-content {
     -webkit-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
     box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
@@ -130,14 +134,14 @@
     height: 90%;
     text-align: center; }
     @media (max-width: 767px) {
-      #random-meme-modal .modal-content {
+      #random-meme-modal .random-modal-content {
         width: 100%;
         height: 100%; } }
-    #random-meme-modal .modal-content .close {
+    #random-meme-modal .random-modal-content .close {
       color: #aaa;
       float: right;
       font-size: 34px; }
-      #random-meme-modal .modal-content .close:hover, #random-meme-modal .modal-content .close:focus {
+      #random-meme-modal .random-modal-content .close:hover, #random-meme-modal .random-modal-content .close:focus {
         color: black;
         text-decoration: none;
         cursor: pointer; }

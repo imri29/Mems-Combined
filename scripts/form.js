@@ -1,15 +1,12 @@
 window.formController = {
-
   init: function() {
-    this.submitButton = $('.upload-button');
+    this.submitButton = $(".upload-button");
     this.bind();
   },
 
   bind: function() {
 
     this.submitButton.click(() => {
-
-
       this.submitButton.html('<div id="loading"></div>');
       const uploaderName = $('input[name="name"]').val();
       const uploaderEmail = $('input[name="email"]').val();
@@ -25,8 +22,8 @@ window.formController = {
           urlPath: blobAsString
         };
 
-        $.post(API_URL, formData, function () {
-          submitButton.html("<span>שליחה</span>");
+        $.post(API_URL, formData, () => {
+          this.submitButton.html("<span>שליחה</span>");
           if ((status = 200)) {
             modalController.showSuccessModal();
           } else {

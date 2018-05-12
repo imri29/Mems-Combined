@@ -1,51 +1,46 @@
 const modalController = {
-  showSuccessModal: () => {
+  showSuccessModal: function() {
     showModal($(".success"));
   },
 
-  showFailedModal: () => {
+  showFailedModal: function() {
     showModal($(".failed"));
   },
 
-    init: function(memes, modal) {
+  //Random Meme Modal
+  init: function(memes, modal) {
+    memes.click(() => {
+      modal.slideDown();
+    });
 
-        // Modal Behavior
-        memes.click(function() {
-            console.log(memes, modal, '------')
-            modal.slideDown();
-        });
+    // close it on X
+    $(".close").click(() => {
+      modal.slideUp();
+    });
 
-        // close it on X
-        $(".close").click(function() {
-            modal.slideUp();
-        });
-
-        //close it when clicking on dark area
-        $(window).click(function(e) {
-            if ($(e.target).is(modal)) {
-                modal.slideUp();
-            }
-        });
-    }
+    //close it when clicking on dark area
+    $(window).click(e => {
+      if ($(e.target).is(modal)) {
+        modal.slideUp();
+      }
+    });
+  }
 };
 
 function showModal(status) {
   status.show();
-  const modal = $(".modal");
-
-  modal.slideDown();
+  const uploadMemeModal = $(".upload-meme-modal");
+  uploadMemeModal.slideDown();
 
   // close it on X
-  $(".close").click(function() {
-    modal.slideUp();
+  $(".upload-close").click(() => {
+    uploadMemeModal.slideUp();
   });
 
   //close it when clicking on dark area
-  $(window).click(function(e) {
-    if ($(e.target).is(modal)) {
-      modal.slideUp();
+  $(window).click(e => {
+    if ($(e.target).is(uploadMemeModal)) {
+      uploadMemeModal.slideUp();
     }
   });
 }
-
-

@@ -5,13 +5,13 @@ const ERROR_MESSAGE =
 const MOBILE_SIZE = 767;
 
 $(document).ready(function() {
-  const button = $(".random-button");
+  const randomButton = $(".random-button");
   const memes = $(".memes");
   const modal = $(".modal");
   const iframe = $("iframe");
 
-  button.click(() => {
-    button.html('<div id="loading"/>');
+  randomButton.click(() => {
+    randomButton.html('<div id="loading"/>');
     $.get(RANDOM_API_URL, loadAndInsertRandomMeme);
   });
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
       const memeId = data.id;
       const category = data.category;
       memes.attr("src", memeAddress);
-      button.html("<span>מם רנדומלי</span>");
+      randomButton.html("<span>מם רנדומלי</span>");
       iframe
         .attr(
           "src",

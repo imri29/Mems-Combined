@@ -10,3 +10,28 @@
   -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
   box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
 }
+
+@mixin modal-box {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stays in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+@mixin modal-actions {
+  color: #aaa;
+  float: right;
+  font-size: 34px;
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
