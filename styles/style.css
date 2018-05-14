@@ -1,9 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 .inputs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
   padding: 8px; }
@@ -13,7 +9,7 @@
     margin-bottom: 25px; }
     @media (max-width: 767px) {
       .inputs form {
-        margin-bottom: 50px; } }
+        margin-bottom: 30px; } }
     .inputs form input {
       height: 56px;
       width: 65%;
@@ -158,30 +154,23 @@ html {
   font-family: "Open Sans Hebrew", sans-serif; }
 
 body {
-  height: 100%;
-  margin-bottom: 0; }
+  height: 100%; }
 
-/** {
-  border: 1px solid gold;
-}*/
-.pic-wrapper {
-  margin-top: 50px;
-  text-align: center;
-  /*@media (max-width: $mobile-size) {
-    margin: 10% auto;
-  }*/ }
+.upload-pic-wrapper {
+  margin-top: 1em;
+  text-align: center; }
 
 .logo {
-  max-width: 100px;
-  max-height: 100px; }
+  max-width: 90px;
+  max-height: 90px; }
   @media (max-width: 767px) {
     .logo {
-      max-height: 80px;
-      max-width: 80px; } }
+      max-height: 65px;
+      max-width: 65px; } }
 
 .upload-title {
   color: #ffffff;
-  margin: 20px 0;
+  margin: 12px 0;
   font-weight: lighter;
   font-size: 5vw; }
   @media (max-width: 767px) {
@@ -190,9 +179,9 @@ body {
 
 .upload-button {
   width: 26%;
-  height: 100px;
+  height: 90px;
   color: #0097f1;
-  padding: 8px;
+  padding: 6px;
   background-color: #ffffff;
   font-family: "Open Sans Hebrew", sans-serif;
   font-size: 32px;
@@ -204,6 +193,9 @@ body {
       font-size: 24px;
       width: 60%;
       margin-top: 40px; } }
+  @media (max-width: 330px) {
+    .upload-button {
+      margin-top: 0; } }
 
 /**** Random Meme Section ****/
 .random-meme-page .random-meme-body {
@@ -213,11 +205,11 @@ body {
   justify-content: space-between;
   height: 100%; }
 
-.pic-wrapper {
+.random-pic-wrapper {
   margin-top: 50px;
   text-align: center;
   height: 150px; }
-  .pic-wrapper .logo-random {
+  .random-pic-wrapper .logo-random {
     width: 100px;
     height: 100px; }
 
